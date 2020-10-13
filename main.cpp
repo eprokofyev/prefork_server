@@ -15,7 +15,7 @@ int main() {
     try
     {
         Server s(8085, 50, config.doc_root);
-        for (int i = 0; i < 4; i++) {
+        for (int i = 1; i < config.cpu; i++) {
             pid_t pid = fork();
             if (pid == fork()) {
                 break;
